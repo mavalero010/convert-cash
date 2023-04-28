@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Conversor de moneda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/5a1b58b9ee.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
+  </head>
+  
+  <body class="flex flex-col h-screen w-screen overflow-y-auto">
+    <header class="flex bg-blue-950">
+      <div id="logo" class="flex h-8 items-center w-1/3 justify-start">
+        <i class="fa-solid fa-coins mx-3 border-r-2 pr-3" style="color: #f2de02;"></i>
+        <span class="uppercase text-white font-bold font-sans">convert.cash</span>
+      </div>
+      <div class="flex justify-around w-4/6 h-full items-center">
+        <a href="#"><span class="uppercase text-white font-bold font-sans hover:text-red-500 px-5">home</span></a>
+        <a href="#"><span class="uppercase text-white font-bold font-sans hover:text-red-500 px-5">login</span></a>
+        <a href="#"><span class="uppercase text-white font-bold font-sans hover:text-red-500 px-5">contact us</span></a>
+        <a href="#"><span class="uppercase text-white font-bold font-sans hover:text-red-500 px-5">sign up</span></a>
+      </div>
+    </header>    
+   
+    <div class="flex flex-col h-2/3 bg-blue-100 mt-10 mx-5 rounded-md shadow-xl justify-center">
+      <nav class="flex bg-slate-600 justify-center border-b-3 shadow-lg rounded-t-md">
+        <ul class="flex space-x-6">
+          <li><button class="conversor-btn uppercase font-bold font-sans text-black bg-slate-300 px-4 rounded-t-lg">conversor</button></li>
+          <li><button class="historico-btn uppercase font-bold font-sans text-white"><a id="historico" href="historico.html">historico</a></button></li>
+          <li><button class="tabla-btn uppercase font-bold font-sans text-white"><a id="tabla" href="tabla.html">tabla</a></button></li>
+        </ul>
+      </nav>
+      <div class="flags flex justify-center items-center h-3/6"></div>
+      <form class="flex space-x-4 px-10 mt-5 justify-center items-center h-2/3">
+        <div class="">
+          <label class="font-bold" for="moneda-origen">Moneda origen:</label>
+          <select class="w-3/4 shadow-lg border-2 border-gray-200 my-2 rounded-md py-2" id="moneda-origen">
+            <option value="USD">Dólar estadounidense (USD)</option>
+            <option value="EUR">Euro (EUR)</option>
+            <option value="GBP">Libra esterlina (GBP)</option>
+            <option value="JPY">Yen japonés (JPY)</option>
+            <option value="CAD">Dólar canadiense (CAD)</option>
+          </select>
+        </div>
+        <br /><br />
+  
+        <div class="">
+          <label class="font-bold" for="moneda-destino">Moneda destino:</label>
+         
+          <select class="w-3/4 shadow-lg border-2 border-gray-200 my-2 rounded-md py-2" id="moneda-destino">
+            <option value="USD">Dólar estadounidense (USD)</option>
+            <option value="EUR">Euro (EUR)</option>
+            <option value="GBP">Libra esterlina (GBP)</option>
+            <option value="JPY">Yen japonés (JPY)</option>
+            <option value="CAD">Dólar canadiense (CAD)</option>
+          </select>
+        </div>
+        <br /><br />
+  
+      <div class="">
+        <label class="font-bold" for="monto">Monto:</label>
+        <input class="w-3/4 shadow-lg border-2 border-gray-200 my-2 rounded-md py-2 px-2" type="number" id="monto" />
+      </div>
+  
+        <br /><br />
+        <div class="">
+          <label class="font-bold" for="resultado">Resultado:</label>
+          <input class="w-3/4 shadow-lg border-2 px-2 border-gray-200 my-2 rounded-md py-2" type="text" id="resultado" readonly />
+        </div>
+        <br /><br />
+        <input class="px-3 text-white rounded-md bg-blue-700 hover:bg-blue-950 h-16 flex items-center justify-center" type="submit" value="Convertir" id="convert"/>
+      </form>
+    </div>
+    <script type="module" src="assets/js/script.js"></script>
+  </body>
+</html>

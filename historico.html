@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>historico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/5a1b58b9ee.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
+</head>
+<body class="flex flex-col h-full w-full justify-center items-center">
+  <header class="flex bg-blue-950 w-full mt-none items-center">
+    <div id="logo" class="flex h-8 items-center w-1/3 justify-start">
+      <i class="fa-solid fa-coins mx-3 border-r-2 pr-3" style="color: #f2de02;"></i>
+      <span class="uppercase text-white font-bold font-sans">convert.cash</span>
+    </div>
+    <div class="flex justify-around w-4/6 h-full items-center">
+      <a href="#"><span class="uppercase text-white font-bold font-sans hover:text-red-500 px-5">home</span></a>
+      <a href="#"><span class="uppercase text-white font-bold font-sans hover:text-red-500 px-5">login</span></a>
+      <a href="#"><span class="uppercase text-white font-bold font-sans hover:text-red-500 px-5">contact us</span></a>
+      <a href="#"><span class="uppercase text-white font-bold font-sans hover:text-red-500 px-5">sign up</span></a>
+    </div>
+  </header>
+
+  
+  <section class="shadow-lg bg-blue-100 h-90 rounded-md mx-5 mt-10 w-3/6">
+    <nav class="flex bg-slate-600 justify-center w-full rounded-t-md">
+      <ul class="flex space-x-6">
+        <li><button class="conversor-btn uppercase font-bold font-sans text-white"><a id="conversor" href="index.html">conversor</a></button></li>
+        <li><button class="historico-btn uppercase font-bold font-sans text-black bg-slate-300 px-4 rounded-t-lg"><a id="historico" href="historico.html">historico</a></button></li>
+        <li><button class="uppercase tabla-btn font-bold font-sans text-white"><a id="tabla" href="tabla.html">tabla</a></button></li>
+      </ul>
+    </nav>
+    <h1 class="text-center uppercase mx-auto font-bold">
+      
+    </h1>
+
+    <div class="flex flex-col overflow-y-auto h-full w-full">
+      <div class="flex text-currency w-full h-full font-serif items-center">
+        <span class="text-center uppercase w-1/4">origen</span>
+        <i class="text-center fa-solid fa-arrow-right mr-2 w-1/4 text-blue-500"></i>
+        <span class="text-center uppercase w-1/4">destino</span>
+        <span class="text-center uppercase w-1/4">fecha</span>
+      </div>
+
+      <div class="flex flex-col justify-between record overflow-y-auto max-h-400">
+      </div>
+    </div>
+  </section>
+  <script type="module" src="assets/js/historico.js"></script>
+</body>
+</html>
